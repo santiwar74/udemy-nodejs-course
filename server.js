@@ -45,6 +45,15 @@ res.render('about.hbs',{
 });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+    pageTitle: 'Projects',
+    projectText:'This is a page for all the list of my projects',
+    currYear: new Date().getFullYear()
+});
+   
+});
+
 app.get('/bad',(req,res)=>{
 res.send({
     errorMessage: 'Unable to process request'
